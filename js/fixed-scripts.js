@@ -268,51 +268,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Form submission with direct Telegram integration
+    // Form submission with FormSubmit & Telegram integration
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Let FormSubmit handle the form submission
+            // No need to prevent default as we want the form to actually submit
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject')?.value || 'Meva Hair Shop Inquiry';
-            const message = document.getElementById('message').value;
-            
-            // Simple validation
-            if (!name || !phone || !email || !message) {
-                showNotification('error', 'Error!', 'Please fill in all required fields.');
-                return;
-            }
-            
-            // Format message for Telegram
-            const formattedMessage = `
-🔔 *NEW WEBSITE INQUIRY* 🔔
-
-👤 *Name:* ${name}
-📱 *Phone:* ${phone}
-📧 *Email:* ${email}
-📋 *Subject:* ${subject}
-
-💬 *Message:*
-${message}
-
-📅 *Date:* ${new Date().toLocaleString()}
-`;
-            
-            // Create a direct Telegram link
-            const telegramUrl = `https://t.me/Meronzs?text=${encodeURIComponent(formattedMessage)}`;
-            
-            // Show success notification
-            showNotification('success', 'Message Ready!', 'Click OK to send your message via Telegram.');
-            
-            // Open Telegram with the formatted message
-            setTimeout(() => {
-                window.open(telegramUrl, '_blank');
-                contactForm.reset();
-            }, 1500);
+            // Show a temporary notification
+            showNotification('success', 'Sending...', 'Your message is being sent to our Telegram.');
         });
     }
 

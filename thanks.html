@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Meva's Premium Hair Shop</title>
+    <meta name="description" content="Thank you for contacting Meva's Premium Hair Shop.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .thank-you-icon {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(214, 53, 127, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        .thank-you-icon i {
+            font-size: 40px;
+            color: var(--primary-color, #d6357f);
+        }
+        
+        .thank-you-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark, #333);
+        }
+        
+        .thank-you-message {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: var(--text-color, #555);
+        }
+        
+        .return-home {
+            margin-top: 20px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <h1 class="thank-you-title">Thank You for Your Message!</h1>
+        <p class="thank-you-message">We have received your inquiry and will get back to you as soon as possible. Your message has been sent directly to our team via Telegram.</p>
+        <div class="contact-info">
+            <p>If you need immediate assistance, please contact us directly:</p>
+            <p><i class="fas fa-phone-alt"></i> <a href="tel:+251949836967">+251 949 836 967</a></p>
+            <p><i class="fab fa-telegram"></i> <a href="https://t.me/Meronzs" target="_blank">@Meronzs</a></p>
+        </div>
+        <div class="return-home">
+            <a href="index.html" class="btn primary-btn">Return to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

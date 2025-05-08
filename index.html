@@ -585,7 +585,7 @@
                         
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject">
+                            <input type="text" id="subject" name="subject" value="Meva Hair Shop Inquiry">
                         </div>
                         
                         <div class="form-group">
@@ -593,7 +593,12 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         
-                        <input type="hidden" id="telegramRecipient" value="@Meronzs">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Meva Hair Shop Inquiry!">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://henokd11.github.io/MevaPremiumHair/thanks.html">
+                        <input type="hidden" name="_telegram" value="@Meronzs">
                         
                         <div class="form-submit">
                             <button type="submit" class="btn primary-btn">Send Message</button>
